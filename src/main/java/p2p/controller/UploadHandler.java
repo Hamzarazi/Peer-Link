@@ -41,7 +41,7 @@ public class UploadHandler implements HttpHandler {
             IOUtils.copy(exchange.getRequestBody(), baos);
             byte[] requestBody = baos.toByteArray();
             Multiparser parser = new Multiparser(requestBody, boundary);
-            Multiparser.parseResult = parser.parse();
+            Multiparser.ParseResult result = parser.parse();
 
         } catch (Exception e) {
             //
