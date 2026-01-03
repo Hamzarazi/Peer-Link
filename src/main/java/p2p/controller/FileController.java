@@ -292,7 +292,7 @@ public class FileController {
 
             } catch (NumberFormatException e) {
                 System.err.println("Port number received is invalid");
-                String response = "BAD REQUEST: Invalid format for the entered port";
+                String response = "Bad Request: Invalid format for the entered port";
                 exchange.sendResponseHeaders(400, response.getBytes().length);
                 try (OutputStream os = exchange.getResponseBody()) {
                     os.write(response.getBytes());
